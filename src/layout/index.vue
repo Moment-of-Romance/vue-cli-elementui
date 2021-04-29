@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="layout-container">
     <Header/>
     <Menu/>
   </div>
@@ -16,3 +16,9 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.layout-container {
+  height: 100%;
+}
+</style>

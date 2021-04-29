@@ -40,6 +40,8 @@
 <script>
 // 导入theme
 import Theme from '@/components/theme'
+// 导入 全屏方法
+import { requestFullScreen, exitFullScreen, isFullScreen } from '@/utils'
 export default {
   name: 'Header',
   components: {
@@ -56,11 +58,16 @@ export default {
     },
     // 退出全屏
     exitFullscreen () {
-      console.log('退出全屏')
+      // 判断是否是全屏
+      if (isFullScreen()) {
+        exitFullScreen()
+      }
     },
     // 全屏
     fullscreen () {
-      console.log('全屏')
+      if (!isFullScreen()) {
+        requestFullScreen(document.documentElement)
+      }
     }
   }
 }
