@@ -1,0 +1,27 @@
+@mixin text-ellipsis() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin text-ellipsis-multi($line) {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: $line;
+  // box 模式下 子元素的排列方式 值有 vertical/horizontal/inline-axis/block-axis/inherit
+  -webkit-box-orient: vertical;
+}
+
+@mixin flex-center($direction) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin round($px) {
+  width: $px;
+  height: $px;
+  border-radius: $px;
+}
