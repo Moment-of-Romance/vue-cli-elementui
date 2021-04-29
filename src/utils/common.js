@@ -3,13 +3,13 @@ export function requestFullScreen(element) {
   const docEle = element
   // 兼容判断
   if (docEle.requestFullScreen) {
-    docEle.requestFullScreen();
+    docEle.requestFullscreen();
   } else if (docEle.msRequestFullScreen) {
-    docEle.msRequestFullScreen()
+    docEle.msRequestFullscreen()
   } else if (docEle.mozRequestFullScreen) {
-    docEle.mozRequestFullScreen()
+    docEle.mozRequestFullscreen()
   } else if (docEle.webkitRequestFullScreen) {
-    docEle.webkitRequestFullScreen()
+    docEle.webkitRequestFullscreen()
   }
 }
 
@@ -18,12 +18,12 @@ export function exitFullScreen() {
   const el = window.parent.document
   if (el.exitFullscreen) {
     el.exitFullscreen()
-  } else if (el.msExitFullScreen) {
-    el.msExitFullScreen()
-  } else if (el.mozExitFullScreen) {
-    el.mozExitFullScreen()
-  } else if (el.webkitExitFullScreen) {
-    el.webkitExitFullScreen()
+  } else if (el.msExitFullscreen) {
+    el.msExitFullscreen()
+  } else if (el.mozExitFullscreen) {
+    el.mozExitFullscreen()
+  } else if (el.webkitExitFullscreen) {
+    el.webkitExitFullscreen()
   }
 }
 
