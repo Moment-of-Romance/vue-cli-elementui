@@ -18,9 +18,9 @@ module.exports = {
           // 代理的域名
           target: 'http://localhost:3000',
           // 重写
-          pathRewrite: {
-            '^/netease-api': ''
-          },
+          // pathRewrite: {
+          //   '^/netease-api': ''
+          // },
           // 是否支持跨域
           changeOrigin: true,
           // 安全

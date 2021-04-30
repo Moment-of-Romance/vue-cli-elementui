@@ -10,6 +10,9 @@ const Mvs = () => import('@/pages/mvs')
 // 注册路由
 Vue.use(VueRouter)
 
+// 导出 center 布局的路由名称
+export const layoutCenterNames = ['discovery', 'playlists', 'songs', 'mvs']
+
 // 菜单路由
 export const menuRoutes = [
   {
@@ -56,8 +59,8 @@ export default new VueRouter({
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: Discovery
-    }
+      redirect: '/discovery'
+    },
+    ...menuRoutes
   ]
 })

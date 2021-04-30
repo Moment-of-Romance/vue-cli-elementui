@@ -6,7 +6,9 @@ import {
   Button,
   Table,
   TableColumn,
-  Popover
+  Popover,
+  Carousel,
+  CarouselItem,
 } from 'element-ui'
 
 // 导出
@@ -33,5 +35,7 @@ export default {
     Vue.use(Table)
     Vue.use(TableColumn)
     Vue.use(Popover)
+    Vue.use(Carousel)
+    Vue.use(CarouselItem)
   }
 }
