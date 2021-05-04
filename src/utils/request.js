@@ -48,7 +48,7 @@ function mixinLoading (interceptors) {
     // 判断是否有 Loading
     if (!loading) {
       loading = Loading.service({
-        target: 'body',
+        target: '#page-content',
         background: 'transparent',
         text: 'loading..'
       })

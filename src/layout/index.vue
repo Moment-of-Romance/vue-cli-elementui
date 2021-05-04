@@ -60,6 +60,7 @@ export default {
       overflow-y: auto;
       min-width: $layout-content-min-width;
       margin-bottom: $mini-player-height;
+      background: var(--body-bgcolor);
 
       .router-view-center {
         max-width: $center-content-max-width;

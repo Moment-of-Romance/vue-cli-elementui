@@ -22,7 +22,6 @@ export default {
   },
   async created () {
     let bannerData = await getBanner()
-    console.log(bannerData)
     this.banners = bannerData.banners
   }
 }
