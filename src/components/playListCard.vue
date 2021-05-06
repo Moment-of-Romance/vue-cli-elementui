@@ -3,7 +3,7 @@
     <div
       class="img-wrap"
     >
-      <img :src="picUrl">
+      <img v-lazy="picUrl">
       <div class="desc-wrap" v-if="desc">
         <span class="desc">{{desc}}</span>
       </div>

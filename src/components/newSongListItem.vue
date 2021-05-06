@@ -4,7 +4,7 @@
       <span>{{index}}</span>
     </div>
     <div class="img-wrap">
-      <img :src="picUrl">
+      <img v-lazy="picUrl">
       <PlayIcon class="play-icon" />
     </div>
     <div class="song-content">

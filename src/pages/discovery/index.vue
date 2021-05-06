@@ -11,6 +11,7 @@
 import Banner from './banner'
 import RecommendMusic from './recommendMusic'
 import NewSongs from './newSongs'
+import { mapGetters } from 'vuex'
 export default {
   name: 'Discovery',
   data () {
@@ -22,6 +23,12 @@ export default {
     Banner,
     RecommendMusic,
     NewSongs
+  },
+  computed: {
+    ...mapGetters(['isLoading'])
+  },
+  created () {
+    console.log('vuex全局状态管理里的loading:', this.isLoading)
   }
 }
 </script>

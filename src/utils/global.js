@@ -11,6 +11,11 @@ import {
   CarouselItem,
 } from 'element-ui'
 
+// 图片懒加载
+import VueLazyload from 'vue-lazyload'
+import { EMPTY_IMG } from '@/utils'
+const logo = require('@/assets/logo.png')
+
 // 导出
 export default {
   // 暴露 install 方法
@@ -37,5 +42,11 @@ export default {
     Vue.use(Popover)
     Vue.use(Carousel)
     Vue.use(CarouselItem)
+
+    // 注册 图片懒加载
+    Vue.use(VueLazyload, {
+      loading: logo,
+      error: logo
+    })
   }
 }

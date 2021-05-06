@@ -3,6 +3,9 @@ import App from './App.vue'
 // 导入路由
 import router from './router'
 
+// 导入 store
+import store from './store'
+
 // 导入global
 import global from '@/utils/global'
 
@@ -16,5 +19,6 @@ Vue.use(global)
 
 new Vue({
   router,
+  store,
   render: h => h(App)
 }).$mount('#app')
