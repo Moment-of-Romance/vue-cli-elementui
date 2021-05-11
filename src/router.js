@@ -6,6 +6,7 @@ const Discovery = () => import('@/pages/discovery')
 const Playlists = () => import('@/pages/playlists')
 const Songs = () => import('@/pages/songs')
 const Mvs = () => import('@/pages/mvs')
+const PlaylistDetail = () => import('@/pages/playlistDetail')
 
 // 注册路由
 Vue.use(VueRouter)
@@ -61,6 +62,11 @@ export default new VueRouter({
       path: '/',
       redirect: '/discovery'
     },
-    ...menuRoutes
+    ...menuRoutes,
+    {
+      path: '/playlist/:id',
+      name: 'playlist',
+      component: PlaylistDetail
+    },
   ]
 })

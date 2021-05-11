@@ -13,7 +13,8 @@ import {
 
 // 图片懒加载
 import VueLazyload from 'vue-lazyload'
-import { EMPTY_IMG } from '@/utils'
+// 导入vue-meta
+import Meta from 'vue-meta'
 const logo = require('@/assets/logo.png')
 
 // 导出
@@ -42,6 +43,9 @@ export default {
     Vue.use(Popover)
     Vue.use(Carousel)
     Vue.use(CarouselItem)
+
+    // 注册vue-meta
+    Vue.use(Meta)
 
     // 注册 图片懒加载
     Vue.use(VueLazyload, {

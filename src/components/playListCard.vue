@@ -25,6 +25,7 @@ export default {
   methods: {
     onClickCard () {
       console.log('click card id:' + this.id)
+      this.$router.push(`/playlist/${this.id}`)
     }
   }
 }
