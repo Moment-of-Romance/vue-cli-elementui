@@ -1,8 +1,8 @@
 <template>
   <div class="play-detail-container">
-    <PlayDetailHeader />
+    <PlayDetailHeader :playList="playlist"/>
     <div class="tabs-wrap">
-      <Tabs />
+      <Tabs :tabs="tabs" v-model="activeTab" @tabChange="tabChange" type="theme"/>
     </div>
   </div>
 </template>
@@ -20,8 +20,10 @@ export default {
   data () {
     return {
       msg: 'I am playlist-detail component',
-      playlist: [],
-      songs: null
+      playlist: {},
+      songs: null,
+      activeTab: 0,
+      tabs: ['歌曲列表', '评论']
     }
   },
   computed: {
@@ -29,8 +31,8 @@ export default {
       return Number(this.$route.params.id)
     }
   },
-  created () {
-    
+  async created () {
+    await this.init()
   },
   methods: {
     async init () {
@@ -40,8 +42,11 @@ export default {
       // 生成songs
       this.genSongs(playlist)
     },
-    getSongs (playlist) {
-
+    genSongs (playlist) {
+      console.log(playlist)
+    },
+    tabChange (index) {
+      console.log('tabIndex:', this.activeTab)
     }
   },
 

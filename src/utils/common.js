@@ -1,3 +1,18 @@
+// 节流 throttle
+export function throttle(func, interval) {
+  let lastTime = null
+  let context = this
+  
+  // 如果当前时间减去上次时间 > interval 或 lastTime==null 则执行函数
+  return function (...args) {
+    let now = Date.now()
+    if (now - lastTime > interval || !lastTime) {
+      lastTime = now
+      func.apply(context, args)
+    }
+  }
+}
+
 // 打开全屏
 export function requestFullScreen(element) {
   const docEle = element
@@ -33,3 +48,5 @@ export function isFullScreen() {
   document.mozFullscreen ||
   document.webkitFullscreen
 }
+
+export const isDef = v => (v !== undefined && v !== null)
